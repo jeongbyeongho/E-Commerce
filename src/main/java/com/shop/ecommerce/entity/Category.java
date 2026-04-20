@@ -1,6 +1,6 @@
 package com.shop.ecommerce.entity;
 
-import com.shop.ecommerce.model.Product;
+import com.shop.ecommerce.entity.Product;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

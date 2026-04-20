@@ -2,7 +2,7 @@ package com.shop.ecommerce.service;
 
 import com.shop.ecommerce.dto.ProductDto;
 import com.shop.ecommerce.entity.Category;
-import com.shop.ecommerce.model.Product;
+import com.shop.ecommerce.entity.Product;
 import com.shop.ecommerce.repository.CategoryRepository;
 import com.shop.ecommerce.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -134,7 +134,7 @@ public class ProductService {
     public void incrementViewCount(Long id) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("상품을 찾을 수 없습니다."));
-        product.incrementViewCount();
+        product.increaseViewCount();
         productRepository.save(product);
     }
 

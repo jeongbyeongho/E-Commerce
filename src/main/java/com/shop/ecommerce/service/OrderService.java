@@ -5,7 +5,6 @@ import com.shop.ecommerce.dto.OrderDto;
 import com.shop.ecommerce.dto.OrderItemDto;
 import com.shop.ecommerce.dto.OrderItemRequest;
 import com.shop.ecommerce.entity.*;
-import com.shop.ecommerce.model.Product;
 import com.shop.ecommerce.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

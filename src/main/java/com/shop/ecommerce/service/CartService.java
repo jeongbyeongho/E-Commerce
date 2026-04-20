@@ -6,7 +6,7 @@ import com.shop.ecommerce.dto.CartItemDto;
 import com.shop.ecommerce.entity.Cart;
 import com.shop.ecommerce.entity.CartItem;
 import com.shop.ecommerce.entity.User;
-import com.shop.ecommerce.model.Product;
+import com.shop.ecommerce.entity.Product;
 import com.shop.ecommerce.repository.CartRepository;
 import com.shop.ecommerce.repository.ProductRepository;
 import com.shop.ecommerce.repository.UserRepository;

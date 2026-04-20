@@ -2,7 +2,7 @@ package com.shop.ecommerce.controller;
 
 import com.shop.ecommerce.dto.ApiResponse;
 import com.shop.ecommerce.dto.ProductDto;
-import com.shop.ecommerce.model.Product;
+import com.shop.ecommerce.entity.Product;
 import com.shop.ecommerce.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
