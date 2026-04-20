@@ -277,7 +277,6 @@ src/main/java/com/shop/ecommerce/
 ## 👨‍💻 개발자
 
 - **Developer**: Bang
-- **Email**: developer@example.com
 
 ## 🤝 기여
 
