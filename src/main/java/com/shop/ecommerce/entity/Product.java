@@ -38,7 +38,7 @@ public class Product {
     private Integer salesCount = 0;
 
     @Column(precision = 3, scale = 2)
-    private Double averageRating = 0.0;
+    private BigDecimal averageRating = BigDecimal.ZERO;
 
     @Column(nullable = false)
     private Integer reviewCount = 0;
@@ -79,7 +79,7 @@ public class Product {
     // 전체 생성자
     public Product(Long id, String name, String description, BigDecimal price, Integer stock,
                    String imageUrl, String brand, Boolean isActive, Integer viewCount,
-                   Integer salesCount, Double averageRating, Integer reviewCount,
+                   Integer salesCount, BigDecimal averageRating, Integer reviewCount,
                    Category category, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
@@ -109,7 +109,7 @@ public class Product {
     public Boolean getIsActive() { return isActive; }
     public Integer getViewCount() { return viewCount; }
     public Integer getSalesCount() { return salesCount; }
-    public Double getAverageRating() { return averageRating; }
+    public BigDecimal getAverageRating() { return averageRating; }
     public Integer getReviewCount() { return reviewCount; }
     public Category getCategory() { return category; }
     public List<Review> getReviews() { return reviews; }
@@ -129,7 +129,7 @@ public class Product {
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }
     public void setViewCount(Integer viewCount) { this.viewCount = viewCount; }
     public void setSalesCount(Integer salesCount) { this.salesCount = salesCount; }
-    public void setAverageRating(Double averageRating) { this.averageRating = averageRating; }
+    public void setAverageRating(BigDecimal averageRating) { this.averageRating = averageRating; }
     public void setReviewCount(Integer reviewCount) { this.reviewCount = reviewCount; }
     public void setCategory(Category category) { this.category = category; }
     public void setReviews(List<Review> reviews) { this.reviews = reviews; }
@@ -166,7 +166,7 @@ public class Product {
         return this.isActive && isInStock();
     }
 
-    public void updateRating(double newAverageRating, int newReviewCount) {
+    public void updateRating(BigDecimal newAverageRating, int newReviewCount) {
         this.averageRating = newAverageRating;
         this.reviewCount = newReviewCount;
     }
@@ -187,7 +187,7 @@ public class Product {
         private Boolean isActive = true;
         private Integer viewCount = 0;
         private Integer salesCount = 0;
-        private Double averageRating = 0.0;
+        private BigDecimal averageRating = BigDecimal.ZERO;
         private Integer reviewCount = 0;
         private Category category;
         private LocalDateTime createdAt;
@@ -203,7 +203,7 @@ public class Product {
         public ProductBuilder isActive(Boolean isActive) { this.isActive = isActive; return this; }
         public ProductBuilder viewCount(Integer viewCount) { this.viewCount = viewCount; return this; }
         public ProductBuilder salesCount(Integer salesCount) { this.salesCount = salesCount; return this; }
-        public ProductBuilder averageRating(Double averageRating) { this.averageRating = averageRating; return this; }
+        public ProductBuilder averageRating(BigDecimal averageRating) { this.averageRating = averageRating; return this; }
         public ProductBuilder reviewCount(Integer reviewCount) { this.reviewCount = reviewCount; return this; }
         public ProductBuilder category(Category category) { this.category = category; return this; }
         public ProductBuilder createdAt(LocalDateTime createdAt) { this.createdAt = createdAt; return this; }

@@ -14,7 +14,7 @@ public class ProductDto {
     private Boolean isActive;
     private Integer viewCount;
     private Integer salesCount;
-    private Double averageRating;
+    private BigDecimal averageRating;
     private Integer reviewCount;
     private Long categoryId;
     private String categoryName;
@@ -27,7 +27,7 @@ public class ProductDto {
     // 전체 생성자
     public ProductDto(Long id, String name, String description, BigDecimal price, Integer stock,
                       String imageUrl, String brand, Boolean isActive, Integer viewCount,
-                      Integer salesCount, Double averageRating, Integer reviewCount,
+                      Integer salesCount, BigDecimal averageRating, Integer reviewCount,
                       Long categoryId, String categoryName, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
@@ -58,7 +58,7 @@ public class ProductDto {
     public Boolean getIsActive() { return isActive; }
     public Integer getViewCount() { return viewCount; }
     public Integer getSalesCount() { return salesCount; }
-    public Double getAverageRating() { return averageRating; }
+    public BigDecimal getAverageRating() { return averageRating; }
     public Integer getReviewCount() { return reviewCount; }
     public Long getCategoryId() { return categoryId; }
     public String getCategoryName() { return categoryName; }
@@ -76,7 +76,7 @@ public class ProductDto {
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }
     public void setViewCount(Integer viewCount) { this.viewCount = viewCount; }
     public void setSalesCount(Integer salesCount) { this.salesCount = salesCount; }
-    public void setAverageRating(Double averageRating) { this.averageRating = averageRating; }
+    public void setAverageRating(BigDecimal averageRating) { this.averageRating = averageRating; }
     public void setReviewCount(Integer reviewCount) { this.reviewCount = reviewCount; }
     public void setCategoryId(Long categoryId) { this.categoryId = categoryId; }
     public void setCategoryName(String categoryName) { this.categoryName = categoryName; }
@@ -99,7 +99,7 @@ public class ProductDto {
         private Boolean isActive;
         private Integer viewCount;
         private Integer salesCount;
-        private Double averageRating;
+        private BigDecimal averageRating;
         private Integer reviewCount;
         private Long categoryId;
         private String categoryName;
@@ -116,7 +116,7 @@ public class ProductDto {
         public ProductDtoBuilder isActive(Boolean isActive) { this.isActive = isActive; return this; }
         public ProductDtoBuilder viewCount(Integer viewCount) { this.viewCount = viewCount; return this; }
         public ProductDtoBuilder salesCount(Integer salesCount) { this.salesCount = salesCount; return this; }
-        public ProductDtoBuilder averageRating(Double averageRating) { this.averageRating = averageRating; return this; }
+        public ProductDtoBuilder averageRating(BigDecimal averageRating) { this.averageRating = averageRating; return this; }
         public ProductDtoBuilder reviewCount(Integer reviewCount) { this.reviewCount = reviewCount; return this; }
         public ProductDtoBuilder categoryId(Long categoryId) { this.categoryId = categoryId; return this; }
         public ProductDtoBuilder categoryName(String categoryName) { this.categoryName = categoryName; return this; }
